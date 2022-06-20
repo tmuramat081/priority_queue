@@ -16,7 +16,6 @@
 # define PRIQUEUE_SUCCESS 1
 # define PRIQUEUE_FAILURE 0
 
-# include <stdio.h>
 # include <stdbool.h>
 # include "ft_heap.h"
 
@@ -24,11 +23,18 @@ typedef struct s_priqueue {
 	t_heap	*heap;
 }	t_priqueue;
 
+// ********** Constructor ********** //
 t_priqueue	*ft_priority_queue_init(size_t cap,
 				int (*cmp)(const void *, const void *));
+
+// ********** Deconstructor ********** //
 void		ft_priority_queue_delete(t_priqueue **queue);
+
+// ********** Modifier ********** //
 int			ft_priority_queue_push(t_priqueue *queue, int *data);
 void		*ft_priority_queue_pop(t_priqueue *queue);
+
+// ********** Other Utils ********** //
 bool		ft_priority_queue_empty(t_priqueue *queue);
 bool		ft_priority_queue_is_empty(t_priqueue *queue);
 
