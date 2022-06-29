@@ -31,11 +31,11 @@ t_priqueue	*ft_priority_queue_init(size_t cap,
 void		ft_priority_queue_delete(t_priqueue **queue);
 
 // ********** Modifier ********** //
-int			ft_priority_queue_push(t_priqueue *queue, int *data);
+int			ft_priority_queue_push(t_priqueue *queue, void *data);
 void		*ft_priority_queue_pop(t_priqueue *queue);
 
 // ********** Other Utils ********** //
 bool		ft_priority_queue_empty(t_priqueue *queue);
 bool		ft_priority_queue_is_empty(t_priqueue *queue);
-
+size_t		ft_priority_queue_size(t_priqueue *queue);
 #endif

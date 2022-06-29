@@ -25,3 +25,10 @@ bool	ft_heap_is_empty(t_heap *heap)
 		return (true);
 	return (false);
 }
+
+size_t	ft_heap_size(t_heap *heap)
+{
+	if (heap->end == 1)
+		return (0);
+	return (heap->end - 1);
+}

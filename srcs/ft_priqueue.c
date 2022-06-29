@@ -32,7 +32,7 @@ void	ft_priority_queue_delete(t_priqueue **queue)
 	*queue = NULL;
 }
 
-int	ft_priority_queue_push(t_priqueue *queue, int *data)
+int	ft_priority_queue_push(t_priqueue *queue, void *data)
 {
 	if (ft_heap_push(queue->heap, data) == HEAP_FAILURE)
 		return (PRIQUEUE_FAILURE);
@@ -53,4 +53,9 @@ bool	ft_priority_queue_is_empty(t_priqueue *queue)
 	if (ft_heap_is_empty(queue->heap) == true)
 		return (true);
 	return (false);
+}
+
+size_t	ft_priority_queue_size(t_priqueue *queue)
+{
+	return (ft_heap_size(queue->heap));
 }

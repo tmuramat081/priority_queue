@@ -36,5 +36,6 @@ int		ft_heap_pop(t_heap *heap, void **data);
 
 bool	ft_heap_is_full(t_heap *heap);
 bool	ft_heap_is_empty(t_heap *heap);
+size_t	ft_heap_size(t_heap *heap);
 
 #endif
