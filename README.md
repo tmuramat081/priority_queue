@@ -1,2 +1,6 @@
 # priority_queue
-priority_queue in c (like STL container)
+A library of priority_queue in C (like STL container).
+
+## Issue
+- Callback function (comparator).
+- Reallocation of memory capacity.
